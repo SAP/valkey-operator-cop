@@ -1,11 +1,11 @@
-{{- $redisName := printf "%s-test-2-%s" (include "redis-operator.fullname" .) (randAlphaNum 10 | lower) }}
+{{- $valkeyName := printf "%s-test-2-%s" (include "valkey-operator.fullname" .) (randAlphaNum 10 | lower) }}
 ---
 apiVersion: cache.cs.sap.com/v1alpha1
-kind: Redis
+kind: Valkey
 metadata:
-  name: {{ $redisName }}
+  name: {{ $valkeyName }}
   labels:
-    {{- include "redis-operator.labels" . | nindent 4 }}
+    {{- include "valkey-operator.labels" . | nindent 4 }}
   annotations:
     helm.sh/hook: test
     helm.sh/hook-weight: "0"
@@ -22,9 +22,9 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ include "redis-operator.fullname" . }}-test-2
+  name: {{ include "valkey-operator.fullname" . }}-test-2
   labels:
-    {{- include "redis-operator.labels" . | nindent 4 }}
+    {{- include "valkey-operator.labels" . | nindent 4 }}
   annotations:
     helm.sh/hook: test
     helm.sh/hook-weight: "1"
@@ -37,7 +37,7 @@ spec:
     - bash
     - -ec
     - |
-        kubectl wait redis.cache.cs.sap.com/{{ $redisName }} --for condition=Ready --timeout 300s
-  serviceAccountName: {{ include "redis-operator.fullname" . }}-test
+        kubectl wait valkey.cache.cs.sap.com/{{ $valkeyName }} --for condition=Ready --timeout 300s
+  serviceAccountName: {{ include "valkey-operator.fullname" . }}-test
   terminationGracePeriodSeconds: 3
   restartPolicy: Never
