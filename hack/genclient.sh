@@ -15,13 +15,13 @@ TEMPDIR=$BASEDIR/tmp/gen
 trap 'rm -rf "$TEMPDIR"' EXIT
 mkdir -p "$TEMPDIR"
 
-mkdir -p "$TEMPDIR"/apis/cache.cs.sap.com
-ln -s "$BASEDIR"/api/v1alpha1 "$TEMPDIR"/apis/cache.cs.sap.com/v1alpha1
+mkdir -p "$TEMPDIR"/apis/operator.kyma-project.io
+ln -s "$BASEDIR"/api/v1alpha1 "$TEMPDIR"/apis/operator.kyma-project.io/v1alpha1
 
 "$GOBIN"/client-gen \
   --clientset-name versioned \
   --input-base "$TEMPDIR"/apis \
-  --input cache.cs.sap.com/v1alpha1 \
+  --input operator.kyma-project.io/v1alpha1 \
   --go-header-file "$BASEDIR"/hack/boilerplate.go.txt \
   --output-pkg github.com/sap/valkey-operator-cop/pkg/client/clientset \
   --output-dir "$TEMPDIR"/pkg/client/clientset \
@@ -32,7 +32,7 @@ ln -s "$BASEDIR"/api/v1alpha1 "$TEMPDIR"/apis/cache.cs.sap.com/v1alpha1
   --output-pkg github.com/sap/valkey-operator-cop/pkg/client/listers \
   --output-dir "$TEMPDIR"/pkg/client/listers \
   --plural-exceptions ValkeyOperator:valkeyoperators \
-  github.com/sap/valkey-operator-cop/tmp/gen/apis/cache.cs.sap.com/v1alpha1
+  github.com/sap/valkey-operator-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
 
 "$GOBIN"/informer-gen \
   --versioned-clientset-package github.com/sap/valkey-operator-cop/pkg/client/clientset/versioned \
@@ -41,10 +41,10 @@ ln -s "$BASEDIR"/api/v1alpha1 "$TEMPDIR"/apis/cache.cs.sap.com/v1alpha1
   --output-pkg github.com/sap/valkey-operator-cop/pkg/client/informers \
   --output-dir "$TEMPDIR"/pkg/client/informers \
   --plural-exceptions ValkeyOperator:valkeyoperators \
-  github.com/sap/valkey-operator-cop/tmp/gen/apis/cache.cs.sap.com/v1alpha1
+  github.com/sap/valkey-operator-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
 
 find "$TEMPDIR"/pkg/client -name "*.go" -exec \
-  perl -pi -e "s#github\.com/sap/valkey-operator-cop/tmp/gen/apis/cache\.cs\.sap\.com/v1alpha1#github.com/sap/valkey-operator-cop/api/v1alpha1#g" \
+  perl -pi -e "s#github\.com/sap/valkey-operator-cop/tmp/gen/apis/operator\.kyma-project\.io/v1alpha1#github.com/sap/valkey-operator-cop/api/v1alpha1#g" \
   {} +
 
 rm -rf "$BASEDIR"/pkg/client

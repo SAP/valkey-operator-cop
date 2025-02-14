@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0
 */
 
 // +kubebuilder:object:generate=true
-// +groupName=cache.cs.sap.com
+// +groupName=operator.kyma-project.io
 
 // Package v1alpha1 contains API Schema definitions for the cache v1alpha1 API group.
 package v1alpha1
@@ -16,7 +16,7 @@ import (
 
 var (
 	// GroupVersion is group version used to register these objects.
-	GroupVersion = schema.GroupVersion{Group: "cache.cs.sap.com", Version: "v1alpha1"}
+	GroupVersion = schema.GroupVersion{Group: "operator.kyma-project.io", Version: "v1alpha1"}
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme.
 	SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}

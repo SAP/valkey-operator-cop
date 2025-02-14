@@ -5,7 +5,7 @@ controllerToolsVersion: v0.16.5
 envtestKubernetesVersion: 1.30.3
 goModule: github.com/sap/valkey-operator-cop
 goVersion: 1.23.4
-groupName: cache.cs.sap.com
+groupName: operator.kyma-project.io
 groupVersion: v1alpha1
 image: valkey-operator-cop:latest
 kind: ValkeyOperator
