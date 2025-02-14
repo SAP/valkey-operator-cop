@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 // +kubebuilder:object:generate=true
 // +groupName=operator.kyma-project.io
 
-// Package v1alpha1 contains API Schema definitions for the cache v1alpha1 API group.
+// Package v1alpha1 contains API Schema definitions for the operator v1alpha1 API group.
 package v1alpha1
 
 import (
