@@ -1,4 +1,4 @@
-apiVersion: cache.cs.sap.com/v1alpha1
+apiVersion: operator.kyma-project.io/v1alpha1
 kind: ValkeyOperator
 metadata:
   name: valkey-operator
