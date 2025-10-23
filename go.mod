@@ -7,7 +7,7 @@ require (
 	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.86.1
 	github.com/sap/component-operator-runtime v0.3.115
 	k8s.io/apiextensions-apiserver v0.34.1
-	k8s.io/apimachinery v0.35.0-alpha.1
+	k8s.io/apimachinery v0.35.0-alpha.2
 	k8s.io/client-go v0.34.1
 	k8s.io/code-generator v0.34.1
 	k8s.io/kube-aggregator v0.34.1
