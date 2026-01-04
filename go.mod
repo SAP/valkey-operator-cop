@@ -1,17 +1,17 @@
 module github.com/sap/valkey-operator-cop
 
-go 1.25.3
+go 1.25.5
 
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.86.1
-	github.com/sap/component-operator-runtime v0.3.115
-	k8s.io/apiextensions-apiserver v0.34.1
+	github.com/sap/component-operator-runtime v0.3.125
+	k8s.io/apiextensions-apiserver v0.34.2
 	k8s.io/apimachinery v0.35.0-alpha.2
-	k8s.io/client-go v0.34.1
-	k8s.io/code-generator v0.34.1
-	k8s.io/kube-aggregator v0.34.1
-	sigs.k8s.io/controller-runtime v0.22.3
+	k8s.io/client-go v0.34.2
+	k8s.io/code-generator v0.34.2
+	k8s.io/kube-aggregator v0.34.2
+	sigs.k8s.io/controller-runtime v0.22.4
 	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20251020210837-fb2beabd029b
 	sigs.k8s.io/controller-tools v0.19.0
 )
@@ -41,8 +41,6 @@ require (
 	github.com/google/gnostic-models v0.7.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
@@ -61,11 +59,11 @@ require (
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.66.1 // indirect
 	github.com/prometheus/procfs v0.16.1 // indirect
-	github.com/sap/go-generics v0.2.38 // indirect
+	github.com/sap/go-generics v0.2.47 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/spf13/afero v1.12.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
-	github.com/spf13/cobra v1.10.1 // indirect
+	github.com/spf13/cobra v1.10.2 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
@@ -88,7 +86,7 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/api v0.34.1 // indirect
+	k8s.io/api v0.34.2 // indirect
 	k8s.io/gengo/v2 v2.0.0-20250604051438-85fd79dbfd9f // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912 // indirect
@@ -96,6 +94,6 @@ require (
 	sigs.k8s.io/cli-utils v0.37.2 // indirect
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
-	sigs.k8s.io/structured-merge-diff/v6 v6.3.0 // indirect
+	sigs.k8s.io/structured-merge-diff/v6 v6.3.1 // indirect
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
