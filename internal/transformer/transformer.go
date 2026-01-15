@@ -1,5 +1,5 @@
 /*
-SPDX-FileCopyrightText: 2025 SAP SE or an SAP affiliate company and valkey-operator-cop contributors
+SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and valkey-operator-cop contributors
 SPDX-License-Identifier: Apache-2.0
 */
 
