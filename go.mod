@@ -1,10 +1,10 @@
 module github.com/sap/valkey-operator-cop
 
-go 1.25.6
+go 1.26.0
 
 require (
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.88.0
+	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.89.0
 	github.com/sap/component-operator-runtime v0.3.128
 	k8s.io/apiextensions-apiserver v0.35.0
 	k8s.io/apimachinery v0.35.0
